@@ -1,0 +1,17 @@
+<html>
+   <head>
+         <div>
+	      <h1><a href="">Django 部落格 - 新增文章</a></h1>
+	   </div>
+   </head>
+   <body>
+      <div>
+          <form method="POST">
+	      {% csrf_token %} 
+	      標題：<input type="text" name="title"><br/>
+	      內文：<textarea name="text"></textarea><br/>
+	      <input type="submit"><br/>
+	  </form>
+      </div>
+  </body>
+</html>
