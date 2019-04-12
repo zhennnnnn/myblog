@@ -1,17 +1,23 @@
+{% load staticfiles %}
 <html>
-   <head>
-         <div>
-	      <h1><a href="">Django 部落格 - 新增文章</a></h1>
-	   </div>
-   </head>
-   <body>
-      <div>
-          <form method="POST">
-	      {% csrf_token %} 
-	      標題：<input type="text" name="title"><br/>
-	      內文：<textarea name="text"></textarea><br/>
-	      <input type="submit"><br/>
-	  </form>
-      </div>
-  </body>
-</html>
+    <head>
+        <title>Django 部落格</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="">Django 部落格 - 新增文章</a></h1>
+        </div>
+        <div class="content container">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="post-form">
+                    標題：<input type="text" name="title" class="form-control"><br/>
+                    內文：<textarea name="text" class="form-control"></textarea><br/>
+                </div>
+                <input type="submit" class="btn btn-primary save">
+            </form>
+        </div>
+    </body>
