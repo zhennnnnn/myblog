@@ -20,3 +20,22 @@ class Tag(models.Model):
 
 	def __str__(self): 
 		return self.name
+
+class Course(models.Model):
+    name = models.CharField(max_length=255,verbose_name='課程名稱')
+    teacher = models.CharField(max_length=255,verbose_name='授課教授')
+    code=models.IntegerField()
+    class_time=models.CharField(max_length=255,verbose_name='修課時間')
+    grade=models.DecimalField(max_digits=2,decimal_places=1)
+    comment=models.TextField()
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    last_updated = models.DateTimeField(auto_now=True, editable=False)
+    #token = models.UUIDField(db_index=True, default=uuid.uuid4)
+
+class Appeal(models.Model):
+    name = models.CharField(max_length=255,verbose_name='授課名稱')
+    code=models.IntegerField(verbose_name='選課代碼')
+    number=models.IntegerField(verbose_name='編號')
+    depiction =models.TextField()
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    #token = models.UUIDField(db_index=True, default=uuid.uuid4)

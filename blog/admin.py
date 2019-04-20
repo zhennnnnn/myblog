@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,Tag
+from .models import Post,Tag,Course,Appeal
 class TagInline(admin.TabularInline):
     model = Tag
 class PostAdmin(admin.ModelAdmin):
@@ -19,3 +19,5 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Tag)
 admin.site.register(Post,PostAdmin)
+admin.site.register(Course)
+admin.site.register(Appeal)
