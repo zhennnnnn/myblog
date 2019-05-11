@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% block title %}{% endblock %}
-    <!--<link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet"> -->
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block title %}{% endblock %}
+  <link href="{% static 'css/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 <body>
     <div id="headings" align="center">
@@ -52,12 +51,11 @@
     {% block content %}{% endblock %}
     <div id="footer">&copy; Copyright 2017 ivanpotato 遊戲資訊系統</div>
 
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'css/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
 
