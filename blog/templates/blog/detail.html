@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block title %}
+<title>遊戲資訊文章頁面</title>
+<!-- 讓瀏覽器不帶refer訊息，繞過顯示爬蟲圖片網址的refer的檢測 -->
+<meta name="referrer" content="never"> 
+{% endblock %}
+{% block content %}
+<div align="center">
+    <a href="/index/" class="btn btn-info" role="button">返回主頁</a>
+    <!-- 判斷是否登入，若有登入則顯示此按鈕 -->
+    {% if request.session.is_login %} 
+        <a href="/adtlovelist/add/{{unit.id}}" class="btn btn-danger" role="button">加入最愛</a>
+    {% endif %}
+</div>
+<div>　</div>
+<div class="table-responsive">
+    <table border="3" cellpadding="2" cellspacing="2" class="table">
+
+        <tr>
+            <td>標題：{{cTitle}}</td>
+        </tr>
+        <tr>
+            <td>作者：{{cAuthor}}</td>
+        </tr>
+        <tr>
+            <td>內文：{% autoescape off %}{{cContent}}{% endautoescape %}</td>
+        </tr>
+    </table>
+</div>
+
+<div align="center">
+    <a href="/index/" class="btn btn-info" role="button">返回主頁</a>
+    <a href="." class="btn btn-danger" role="button">回頂部</a>
+</div>
+
+{% endblock %}

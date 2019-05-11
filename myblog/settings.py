@@ -44,7 +44,7 @@ ROOT_URLCONF = 'myblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'C:\Users\zhen\Desktop\myblog\blog\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

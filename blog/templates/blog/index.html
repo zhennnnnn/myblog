@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div class="topfunction">
+        <a href="/crawler/" title="獲取最新資訊">獲取最新資訊</a>
+    </div>
+    <table border="3" cellpadding="2" cellspacing="2">
+        <th>標題</th>
+        <th>作者</th>
+        <th>連結網址</th>
+        {% for un in unit %}
+        <tr>
+            <td><a href="/detail/{{un.id}}">{{un.cTitle}}</a></td>
+            <td>{{un.cAuthor}}</td>
+            <td><a href="{{un.cLink}}">巴哈姆特討論串</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
